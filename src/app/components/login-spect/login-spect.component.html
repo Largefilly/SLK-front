@@ -1,0 +1,14 @@
+<div class="login-container">
+    <h2>Spectator Login</h2>
+    <form (submit)="login()">
+      <div class="form-group">
+        <label for="viewerId">Viewer ID:</label>
+        <input type="text" id="dni" [(ngModel)]="dni" name="DNI" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="codigoBoleto" name="password" required />
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>

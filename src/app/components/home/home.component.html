@@ -1,0 +1,16 @@
+<div class="home-container">
+  <div class="products-container">
+    <div *ngFor="let product of products" class="product-card">
+      <img [src]="product.imagen" alt="{{ product.nombre }}" class="product-image" />
+      <h3>{{ product.nombre }}</h3>
+      <input type="number" [value]="selectedProducts[product.id] || 0"
+             (input)="onInputChange(product, $event)" />
+    </div>
+  </div>
+  <div class="order-summary">
+    <h3>Resumen del Pedido</h3>
+    <button (click)="placeOrder()">Realizar Pedido</button>
+  </div>
+</div>
+
+  
